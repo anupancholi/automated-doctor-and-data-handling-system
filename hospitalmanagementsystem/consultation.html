@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patient page</title>
+    <link rel="stylesheet" href ="consultation.css">
+    <script src="consultation.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+<style>
+     body {
+        background-image: url('consultation_bg.jpg');
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1> CONSULTATION </h1>
+    </header>
+    <form action="backend.php">
+        <div>
+            
+        </div>
+        <div>
+            NAME : <input type="text" name="Patients_name">
+        </div>
+        <br>
+        <div>
+            AGE : <input type="number" name="patients_age">
+        </div>
+        <br>
+        <div>
+            DOB : <input type="date" name="Patients_dob">
+        </div>
+        <br>
+        <div>
+            EMAIL : <input type="email" name="Patients_email" id="email">    
+        </div>
+        
+        <div>
+            Sex : Male <input type="radio" name="Sex" id="gnederM"> Female <input type="radio" name="Sex" id="genderF">
+         </div>
+         <br>
+        
+         <form>
+             <label for="symp1"> Symptom 1: </label>
+             <select id="symp1" style="display: inline-block;">
+                 <option value="itching">Itching </option>
+                 <option value="shivering">Shivering </option>
+                 <option value="stomach_pain">stomach pain </option>
+                 <option value="headache">headache </option>
+                 <option value="indigestion">Indigestion </option>
+                 <option value="throat_patches">Throat patches </option>
+                 <option value="fatigue">Fatigue </option>
+                 <option value="sunken_eyes">Sunken eyes </option>
+                 <option value="cough">cough </option>
+             </select>
+         
+                 <br>
+         
+              <label for="symp2"> Symptom 2: </label>
+              <select id="symp2" style="display: inline-block;">
+                   <option value="skin_rash">skin rash</option>
+                   <option value="chills">chills</option>
+                   <option value="acidity">acidity</option>
+                   <option value="vomitting">vomitting</option>
+                   <option value="chest_pain">chest pain</option>
+                   <option value="loss_of_appetite">loss of appetite</option>
+                   <option value="high_fever">high fever</option>
+                   <option value="weight_loss">weight loss</option>
+                   <option value="dehydration">dehydration</option>
+              </select> <br>
+
+              <label for="symp3">Symptom 3: </label>
+              <select id="symp3" style="display: inline-block;">
+                 <option value="nodal_skin_eruption">nodal skin eruptions </option>
+                 <option value="watery_eyes">watery eyes</option>
+                 <option value="ulcers_on_tongue">ulcers on tongue</option>
+                 <option value="nausea">nausea</option>
+                 <option value="dizziness">dizziness</option>
+                 <option value="abdominal_pain">abdominal pain</option>
+                 <option value="restlessness">restlessness</option>
+                 <option value="diarrhoea">diarrhoea</option>
+                 <option value="breathlessness">breathlessness</option>
+              </select> <br>
+              <button type="button" onclick="document.getElementById('prediction').innerHTML = predict_Disease()">Predict Disease</button>
+              <p id="prediction"></p>
+            </form>
+            
+    </form>
+</body>
+</html>
